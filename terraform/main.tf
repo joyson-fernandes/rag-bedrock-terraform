@@ -22,6 +22,7 @@ module "lambda" {
   vpc_id                   = module.networking.vpc_id
   subnet_ids               = module.networking.private_subnet_ids
   lambda_security_group_id = module.networking.lambda_security_group_id
+  docs_bucket_suffix       = var.docs_bucket_suffix
 
   aurora_secret_arn    = module.database.master_user_secret_arn
   aurora_endpoint      = module.database.cluster_endpoint
