@@ -1,0 +1,15 @@
+{
+  "ragConfigs": [
+    {
+      "knowledgeBaseConfig": {
+        "retrieveAndGenerateConfig": {
+          "type": "KNOWLEDGE_BASE",
+          "knowledgeBaseConfiguration": {
+            "knowledgeBaseId": "YOUR-KB-ID",
+            "modelArn": "arn:aws:bedrock:eu-west-2::foundation-model/eu.anthropic.claude-haiku-4-5-20251001-v1:0"
+          }
+        }
+      }
+    }
+  ]
+}

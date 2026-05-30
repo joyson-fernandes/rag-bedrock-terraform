@@ -1,0 +1,21 @@
+{
+  "evaluatorModelConfig": {
+    "bedrockEvaluatorModels": [
+      {
+        "modelIdentifier": "anthropic.claude-sonnet-4-6"
+      }
+    ]
+  },
+  "dataset": {
+    "name": "aip-c01-eval",
+    "datasetLocation": {
+      "s3Uri": "s3://YOUR-BUCKET/evals/eval-dataset.jsonl"
+    }
+  },
+  "metricNames": [
+    "Builtin.Correctness",
+    "Builtin.Faithfulness",
+    "Builtin.Completeness",
+    "Builtin.Relevance"
+  ]
+}

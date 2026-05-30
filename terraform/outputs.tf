@@ -27,3 +27,30 @@ output "docs_bucket" {
   description = "S3 docs bucket name"
   value       = module.lambda.docs_bucket
 }
+
+# ---- Bedrock outputs — use these to update Query Lambda env vars ----
+
+output "guardrail_id" {
+  description = "Bedrock Guardrail ID — set as GUARDRAIL_ID on Query Lambda"
+  value       = module.bedrock.guardrail_id
+}
+
+output "guardrail_version" {
+  description = "Bedrock Guardrail published version"
+  value       = module.bedrock.guardrail_version
+}
+
+output "prompt_arn" {
+  description = "Versioned Prompt ARN — set as PROMPT_ARN on Query Lambda"
+  value       = module.bedrock.prompt_arn
+}
+
+output "knowledge_base_id" {
+  description = "Bedrock Knowledge Base ID — set as KNOWLEDGE_BASE_ID on Query Lambda"
+  value       = module.bedrock.knowledge_base_id
+}
+
+output "eval_role_arn" {
+  description = "IAM role ARN for Bedrock Evaluations jobs"
+  value       = module.bedrock.eval_role_arn
+}
