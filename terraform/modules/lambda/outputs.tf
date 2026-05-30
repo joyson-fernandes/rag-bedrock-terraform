@@ -19,7 +19,13 @@ output "lambda_role_arn" {
 }
 
 output "docs_bucket" {
-  value = aws_s3_bucket.docs.id
+  description = "S3 docs bucket name"
+  value       = aws_s3_bucket.docs.id
+}
+
+output "docs_bucket_arn" {
+  description = "S3 docs bucket ARN (required by bedrock module)"
+  value       = aws_s3_bucket.docs.arn
 }
 
 output "sessions_table" {

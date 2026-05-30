@@ -3,6 +3,11 @@ output "cluster_endpoint" {
   value       = aws_rds_cluster.main.endpoint
 }
 
+output "cluster_arn" {
+  description = "Aurora cluster ARN (required for Knowledge Base RDS vector store)"
+  value       = aws_rds_cluster.main.arn
+}
+
 output "database_name" {
   description = "Database name"
   value       = aws_rds_cluster.main.database_name
